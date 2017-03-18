@@ -1,0 +1,106 @@
+<head>
+    <title>Honours</title>
+</head>
+
+<body>
+
+  {{> loginButtons}}
+
+{{> hello}}
+
+
+{{> sortTemplate }}
+
+
+{{> info}}
+
+<h2>========= Retreiving page content from external API / reddit ============== </h2>
+
+<div class="app">
+   <div class="row">
+       <div class="col-lg-10 col-md-10 col-sm-12">
+
+           <div class="list-group">
+               {{#each posts}}
+                   {{> post}}
+               {{/each}}
+           </div>
+       </div>
+   </div>
+</div>
+
+
+
+{{> test}}
+
+
+
+
+
+
+
+</body>
+
+
+<template name="hello">
+
+  <button id="button">WSDL service</button>
+  <button id="regex">Regex search</button>
+  <button id="sliced">Sliced match</button>
+  <button id="startsWith">StartsWith</button>
+  <button id="timer">Timer</button>
+  <button id="toff">Timer Off</button>
+  <button id="webpage">Retreive Pages</button>
+ <br>
+  <br>
+   <br>
+
+
+ <form >
+   Number of iterations: <input id="iter" type="text" name="FirstName" value="300000"><br>
+ </form>
+
+
+ <H3> Timer : {{timer}} ms </H3>
+
+
+
+  <button id="startQuery">Query Stock</button>
+
+ <h2>=========RESULTS FROM STOCK EXCHANGE DATA SET============== </h2>
+
+
+
+
+ <ul>
+   {{#each stock}}
+   |
+ <!-- <li> {{Ticker  }} </li> -->
+       <!-- <li>{{movieId}}: {{titile}} : {{genres}}</li> -->
+   {{/each}}
+ </ul>
+
+  query took {{timer}} miniseconds to execute
+
+
+
+</template>
+
+
+<template name= "test">
+
+
+
+
+
+</template>
+
+
+
+<template name="info">
+  <h2>Benchmarks</h2>
+  <ul>
+    <li><a href="http://jsperf.com/regex-vs-sliced-match-vs-startswith" target="_blank">Benchmark /jsperfS</a></li>
+<li><a href="http://jsperf.com/browse" target="_blank">browse /jsperfS</a></li>
+  </ul>
+</template>
